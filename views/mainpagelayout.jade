@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      h1 Mai-Khanh Lê
+      .introduction
+        block introduction
+    .container
+      .main-content
+        table
+          tr
+            td
+              block cellule1
+            td
+              block cellule2
+          tr
+            td
+              block cellule3
+            td
+              block cellule4
+          tr
+            td
+              block cellule5
+            td
+              block cellule6
+      .sidebar
+        block sidebar
+    footer
+      p Running on node with Express, Jade and Stylus
