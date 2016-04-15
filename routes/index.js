@@ -20,4 +20,8 @@ router.post('/changePage', function(req, res) {
 	res.redirect("/helloworld");
 });
 
+router.post('/linkedin', function(req, res) {
+	res.redirect("http://linkedin.com/lemaiky");
+});
+
 module.exports = router;

@@ -1,52 +1,74 @@
 extends mainpagelayout
 
-block introduction
-	p 4850 chemin Queen-Mary, #104
-	p Montréal, QC, H3W 1W9
-	p CANADA
-
-block cellule1
-	h1 Language Skills
-	p French
-	p English
-	p Vietnamese
-	p Chinese Mandarin
-	p Spanish
-	p Korean
-
-block cellule2
-	h1 Education
-	p Ecole Polytechnique de Montreal
-	p Lycée Marcelin Berthelot
-
-block cellule3
-	h1 Computer Skills
-	h2 Programmation
-	p Java, C/C++, C#, ...
-	h2 Libraries
-	p Qt, WPF, OpenGL, Android SDK, Java Swing, Hibernate
-	h2 IDE
-	p Visual Studio, Eclipse, Unity3D, Android Studio
-	h2 Operating Systems
-	p Windows, Linus, Mac OS
-	h2 Database
-	p PostgreSQL, MySQL, OracleSQL
-	h2 Microsoft Office
-	p Word, Excel, Powerpoint, Outlook
-
-block cellule4
-	h1 Technical Skills
-
-block cellule5
-	h1 Projects and Experiences
-
-block cellule6
-	h1 Leisures
+block content
+  table
+    tr
+      td
+        h1 Language Skills
+        table
+          tr(id="language")
+            td(id="language")
+              p French
+            td(id="language")
+              p Fluent
+          tr(id="language")
+            td(id="language")
+              p English
+            td(id="language")
+              p Advanced
+          tr(id="language")
+            td(id="language")
+              p Vietnamese
+            td(id="language")
+              p Spoken only
+          tr(id="language")
+            td(id="language")
+              p Chinese Mandarin
+            td(id="language")
+              p Beginner
+          tr(id="language")
+            td(id="language")
+              p Korean
+            td(id="language")
+              p Beginner
+      td
+        h1 Education
+        h2 Bachelor of Engineering - Software Engineering
+        p Ecole Polytechnique de Montreal, Canada
+        p 2011 - 2016
+        h2 High School Diploma in Science
+        p Lycée Marcelin Berthelot, France
+        p 2008 - 2011
+    tr
+      td(colspan="2")
+        h1 Computer Skills
+        h2 Programmation
+        p Java, C/C++, C#, Javascript, Python, HTML/CSS
+        h2 Libraries
+        p Qt, WPF, OpenGL, Android SDK, Java Swing
+        h2 IDE
+        p Visual Studio, Eclipse, Unity3D, Android Studio
+        h2 Operating Systems
+        p Windows, Linus, Mac OS
+        h2 Database
+        p PostgreSQL, MySQL, OracleSQL
+        h2 Microsoft Office
+        p Word, Excel, Powerpoint, Outlook
+    tr
+      td(colspan="2")
+        h1 Technical Skills
+    tr
+      td
+        h1 Projects and Experiences
+      td
+        h1 Leisures
 
 block sidebar
-	.widget
-		h1 Contact informations
-		p 514-649-5504
-		p lemaikhanh.lmk@gmail.com
-		p linkedin
-		p facebook
+  .widget
+    h1 Contact informations
+    p 514-649-5504
+    p lemaikhanh.lmk@gmail.com
+    p
+      a(href='http://linkedin.com/lemaikhanh') linkedin
+    p
+      a(href='http://www.facebook.com/le.maiky') facebook

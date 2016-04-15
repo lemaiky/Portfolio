@@ -112,6 +112,14 @@ td h1 {
 td h2 {
 	font-weight: bold;
 }
+th #language,
+td #language {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-weight: normal;
+  border: 0;
+}
 a img {
   border: none;
 }
@@ -187,7 +195,7 @@ header .introduction p {
   border-radius: 2px 2px 0px 0px;
   margin-bottom: 10px;
 }
-.sidebar .widget p {
+.sidebar .widget p, a {
   font-size: 13px;
   padding: 0px 10px;
   margin-bottom: 10px;
