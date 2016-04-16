@@ -214,14 +214,15 @@ header .introduction p {
   border-bottom:none;
   margin-right:5px;
   margin-bottom:1px;
-  background-color:#eee
+  background-color:#eee;
+  color: #fa5b4d;
 }
 #nav ul li a.current{
   background-color:#fff;
   border-bottom:1px solid #fff;
 }
 #nav ul li a:hover{
-  color:#000;
+  color:#FAE3E1;
   background-color:#eee;
 }
 p {

@@ -24,13 +24,13 @@ html
             else
               a(href='/resume') Resume
           li
-            if(currentURL == '/')
-              a(href='/').current Projects
+            if(currentURL == '/projects')
+              a(href='/projects').current Projects
             else
-              a(href='/') Projects
+              a(href='/projects') Projects
       .main-content
         block content
       .sidebar
         block sidebar
     footer
-      p Running on node with Express, Jade and Stylus
+      p Running on node with Express and Jade

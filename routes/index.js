@@ -11,6 +11,11 @@ router.get('/resume', function(req, res) {
   res.render('resume', { title: 'Resume' });
 });
 
+/* GET Projects page. */
+router.get('/projects', function(req, res) {
+  res.render('projects', { title: 'Projects' });
+});
+
 /* POST go to Hello World page*/
 router.post('/changePage', function(req, res) {
 	res.redirect("/resume");
