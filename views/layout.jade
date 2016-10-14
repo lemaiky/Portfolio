@@ -23,6 +23,11 @@ html
               a(href='/resume').current Resume
             else
               a(href='/resume') Resume
+          li 
+            if(currentURL == '/education')
+              a(href='/education').current Education
+            else
+              a(href='/education') Education
           li
             if(currentURL == '/projects')
               a(href='/projects').current Projects
