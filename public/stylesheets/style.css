@@ -135,6 +135,7 @@ header {
   color: #fff;
   font-size: 50px;
   text-align: center;
+  font-weight: bold;
 /*
    * Note the use of the `main-color`
    * variable and the `darken` function
@@ -142,9 +143,10 @@ header {
   background-color: #fa5b4d;
   border-bottom: 1px solid #df1806;
   text-shadow: 0px -1px 0px #df1806;
+  border-radius: 150px;
 }
 header .introduction p {
-  font-family: 'Cambria';
+  font-family: 'Quicksand';
   padding: 0;
   color: #fff;
   font-size: 12px;
@@ -154,7 +156,8 @@ header .introduction p {
   line-height: 1;
 }
 header h2 {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: normal;
 }
 .container {
   width: 100%;
@@ -228,21 +231,8 @@ header h2 {
   color:#FAE3E1;
   background-color:#eee;
 }
-#education h2{
-  color: #fa5b4d;
-  font-size: 20px;
-  font-weight:bold;
-}
-#education p{
-  line-height: 1;
-  font-size: 15px;
-  padding-left: 10px;
-}
 p {
   line-height: 1.8;
-}
-p.italic{
-  font-style: italic;
 }
 footer {
   width: 500px;
