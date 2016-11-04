@@ -130,7 +130,7 @@ body {
   color: #444;
 }
 header {
-  font-family: 'Quicksand';
+  font-family: 'Cambria';
   padding: 20px 10px;
   color: #fff;
   font-size: 50px;
@@ -144,7 +144,7 @@ header {
   text-shadow: 0px -1px 0px #df1806;
 }
 header .introduction p {
-  font-family: 'Quicksand';
+  font-family: 'Cambria';
   padding: 0;
   color: #fff;
   font-size: 12px;
@@ -152,6 +152,9 @@ header .introduction p {
   background-color: #fa5b4d;
   text-shadow: 0px -1px 0px #df1806;
   line-height: 1;
+}
+header h2 {
+  font-size: 16px;
 }
 .container {
   width: 100%;
