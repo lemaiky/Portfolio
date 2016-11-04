@@ -11,6 +11,11 @@ router.get('/resume', function(req, res) {
   res.render('resume', { title: 'Resume' });
 });
 
+/* GET Education page. */
+router.get('/education', function(req, res) {
+  res.render('education', { title: 'Education' });
+});
+
 /* GET Projects page. */
 router.get('/projects', function(req, res) {
   res.render('projects', { title: 'Projects' });

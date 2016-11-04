@@ -228,8 +228,21 @@ header h2 {
   color:#FAE3E1;
   background-color:#eee;
 }
+#education h2{
+  color: #fa5b4d;
+  font-size: 20px;
+  font-weight:bold;
+}
+#education p{
+  line-height: 1;
+  font-size: 15px;
+  padding-left: 10px;
+}
 p {
   line-height: 1.8;
+}
+p.italic{
+  font-style: italic;
 }
 footer {
   width: 500px;
