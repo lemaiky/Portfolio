@@ -16,8 +16,6 @@ applet,
 object,
 iframe,
 h1,
-h2,
-h3,
 h4,
 h5,
 h6,
@@ -98,9 +96,6 @@ td {
   width: 200px;
   padding: 15px;
 }
-td:hover {
-	background-color: #FAE3E1;
-}
 td p {
 	line-height: 1;
 }
@@ -125,40 +120,36 @@ a img {
  * background color as variables
  */
 body {
-  font-family: 'Georgia';
+  font-family: 'Quicksand';
   background-color: #faf9f0;
-  color: #444;
+  color: #000;
 }
 header {
-  font-family: 'Cambria';
-  padding: 20px 10px;
+  font-family: 'Quicksand';
+  padding: 5px 5px;
   color: #fff;
-  font-size: 50px;
+  font-size: 25px;
   text-align: center;
   font-weight: bold;
-/*
-   * Note the use of the `main-color`
-   * variable and the `darken` function
-   */
-  background-color: #fa5b4d;
-  border-bottom: 1px solid #df1806;
-  text-shadow: 0px -1px 0px #df1806;
-  border-radius: 150px;
+  background-color: #000;
 }
 header .introduction p {
   font-family: 'Quicksand';
   padding: 0;
   color: #fff;
-  font-size: 12px;
   text-align: center;
   background-color: #fa5b4d;
   text-shadow: 0px -1px 0px #df1806;
   line-height: 1;
 }
-header h2 {
-  font-size: 18px;
-  font-weight: normal;
-}
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+},
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+},
 .container {
   width: 100%;
   margin: 50px auto;
@@ -167,9 +158,6 @@ header h2 {
 .main-content {
   float: left;
   width: 75%;
-}
-.main-content p {
-  margin-bottom: 20px;
 }
 .sidebar {
   float: left;
@@ -204,8 +192,7 @@ header h2 {
   margin-bottom: 10px;
 }
 #nav ul{
-  text-align:left;
-  border-bottom:1px solid #ccc;
+  text-align:right;
   list-style-type:none;
   padding:10px 10px;
 }
@@ -214,22 +201,16 @@ header h2 {
 }
 #nav ul li a{
   font-weight:bold;
-  border:1px solid #ccc; 
+  border:1px solid #fff; 
   text-decoration:none;
-  padding:10px 20px;
-  border-bottom:none;
+  padding:10px 10px;
   margin-right:5px;
   margin-bottom:1px;
-  background-color:#eee;
-  color: #fa5b4d;
-}
-#nav ul li a.current{
-  background-color:#fff;
-  border-bottom:1px solid #fff;
+  color: #fff;
 }
 #nav ul li a:hover{
-  color:#FAE3E1;
-  background-color:#eee;
+  color:#000;
+  background-color:#fff;
 }
 p {
   line-height: 1.8;

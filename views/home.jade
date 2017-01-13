@@ -5,30 +5,20 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     header
-      h1 Mai-Khanh LÊ
-      .introduction
-        h2 Software Engineer
-        h2 Master Student in Interactive Media Technology
-    .container
       div#nav
         ul
-          li 
-            if(currentURL == '/')
-              a(href='/').current Main
-            else
-              a(href='/') Main
-          li 
-            if(currentURL == '/resume')
-              a(href='/resume').current Resume
-            else
-              a(href='/resume') Resume
           li
-            if(currentURL == '/projects')
-              a(href='/projects').current Projects
-            else
-              a(href='/projects') Projects
+            a(href='/') About
+          li
+            a(href='/projects') Projects
+          li
+            a(href='/contact') Contact
+    .container
       .main-content
-        block content
+        include about.html
+        hr
+        block contentProjects
+        block contentContact
       .sidebar
         .widget
           h1 Contact informations
