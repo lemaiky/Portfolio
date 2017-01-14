@@ -12,8 +12,8 @@ router.get('/about', function(req, res) {
 });
 
 /* GET Projects page. */
-router.get('/projects', function(req, res) {
-  res.render('projects', { title: 'Projects' });
+router.get('/work', function(req, res) {
+  res.render('work', { title: 'Work' });
 });
 
 /* POST redirect to linkedin */

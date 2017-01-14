@@ -3,32 +3,38 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/javascripts/parallaxImg.js")
+    script.
+      $(document).on("ready", function() {
+        var parallaxSettings = {
+          initialOpacity: 1,
+          opacitySpeed: 0.1,
+          pageLoader: true
+        };
+        parallaxImgScroll(parallaxSettings);
+      });
   body
     header
-      div#nav
+      nav
         ul
           li
             a(href='/') About
           li
-            a(href='/projects') Projects
+            a(href='/work') Work
           li
             a(href='/contact') Contact
     .container
       .main-content
-        include about.html
+        section
+          article.parallax-img-comtainer
+            include about.html
         hr
-        block contentProjects
-        block contentContact
+        section
+          article.parallax-img-comtainer
+            include projectsTemp.html
+        hr
       .sidebar
         .widget
-          h1 Contact informations
-          p 
-            a(href='mailto:lemaikhanh.lmk@gmail.com') lemaikhanh.lmk@gmail.com
-          p
-            a(href='https://www.linkedin.com/in/lemaikhanh') linkedin
-          p
-            a(href='https://github.com/lemaiky') Github
-          p
-            a(href='https://bitbucket.org/lemaiky/') Bitbucket
+          include contact.html
     footer
       p Running on node with Express and Jade
