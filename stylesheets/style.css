@@ -75,8 +75,7 @@ td {
 }
 body {
   line-height: 1;
-  color: #000;
-  background: #fff;
+  font-family: 'Quicksand';
 }
 ol,
 ul {
@@ -108,29 +107,6 @@ td h2 {
 a img {
   border: none;
 }
-/*
- * Store the main color and
- * background color as variables
- */
-body {
-  font-family: 'Quicksand';
-  background-color: #faf9f0;
-  color: #000;
-  position: relative;
-  top: 50px;
-}
-header {
-  font-family: 'Quicksand';
-  color: #fff;
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
-  background-color: #000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
 h2 {
   font-size: 25px;
   font-weight: bold;
@@ -139,15 +115,6 @@ h3 {
   font-size: 20px;
   font-weight: bold;
 },
-.container {
-  width: 100%;
-  margin: 50px auto;
-  overflow: hidden;
-}
-.main-content {
-  float: left;
-  width: 75%;
-}
 .sidebar {
   float: left;
   width: 25%;
@@ -176,35 +143,4 @@ h3 {
   font-size: 13px;
   padding: 0px 10px;
   margin-bottom: 10px;
-}
-nav ul{
-  text-align:right;
-  list-style-type:none;
-  padding:10px 10px;
-}
-nav ul li{
-  display:inline;
-}
-nav ul li a{
-  font-weight:bold;
-  border:1px solid #fff; 
-  text-decoration:none;
-  padding:10px 10px;
-  margin-right:5px;
-  margin-bottom:1px;
-  color: #fff;
-}
-nav ul li a:hover{
-  color:#000;
-  background-color:#fff;
-}
-p {
-  line-height: 1.8;
-}
-footer {
-  width: 500px;
-  margin: 50px auto;
-  border-top: 1px dotted #ccc;
-  padding-top: 5px;
-  font-size: 13px;
 }
