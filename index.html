@@ -9,33 +9,43 @@
     <script src="javascripts/modernizr.js"></script> <!-- Modernizr -->
   </head>
   <body data-hijacking="on" data-animation="fixed">
+    <!-- Header - navigation bar-->
   	<header>
       <nav>
+        <h2>Mai-Khanh Lê</h2>
         <ul>
-          <li><a href='#about'>About</a></li>
-          <li><a href='#work'>Work</a></li>
-          <li><a href='#contact'>Contact</a></li>
+          <li><a href='#about' onclick="displayAbout()">About</a></li>
+          <li><a href='#projects' onclick="displayWork()">Work</a></li>
         </ul>
       </nav>
     </header>
-    <div class="mainContent">
-      <section class="cd-section visible">
-        <div id="about"><iframe src="views/about.html"></iframe></div>
-      </section>
-      <section class="cd-section">
-        <div id="work"><iframe src="views/projectsTemp.html"></iframe></div>
-      </section>
-      <section class="cd-section">
-        <div id="contact"><iframe src="views/contact.html"></iframe></div>
-      </section>
+
+    <!-- Main content -->
+    <div id="about">
+      <iframe src="views/about.html"></iframe>
     </div>
+    <div id="projects" visibility="hidden">
+      <iframe src="views/projects.html"></iframe>
+    </div>
+
     <footer>
-      - Mai-Khanh Lê - 2017.
+      - Mai-Khanh Lê - 2017 -
     </footer>
 
     <script src="javascripts/jquery-2.1.4.js"></script>
     <script src="javascripts/velocity.min.js"></script>
     <script src="javascripts/velocity.ui.min.js"></script>
     <script src="javascripts/main.js"></script> <!-- Resource jQuery -->
+
+    <script>
+      function displayWork() {
+        document.getElementById("work").style.visibility = "visible";
+        document.getElementById("about").style.visibility = "hidden";
+      }
+      function displayAbout() {
+        document.getElementById("work").style.visibility = "hidden";
+        document.getElementById("about").style.visibility = "visible";
+      }
+    </script>
   </body>
 </html>

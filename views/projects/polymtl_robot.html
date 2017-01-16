@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="../../stylesheets/style.css">
+<link rel="stylesheet" href="../../stylesheets/styleScroll.css"> <!-- Resource style -->
+
+<div class="video">
+	<video width="320" height="240" controls>
+		<source src="../../img/project_robot.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+		<script>
+        	var video = document.currentScript.parentElement;
+        	video.volume = 0.1;
+        </script>
+	</video>
+</div>
+<ul class="table_desc">
+	<li style="border: 1px solid black;">Project Description</li>
+</ul>
+
+<style>
+	div.video{
+		width: 100%;
+		height: 70%;
+		background-color: rgba(0, 0, 0, 0.2);
+		position: fixed;
+		margin: 100px auto;
+		padding: 0;
+		left: 0;
+		display: block;
+	}
+	video {
+		width: 640;
+		height: 360;
+		margin: 50px auto;
+		display: block;
+		position: fixed;
+		right: 20%;
+		top: 23%;
+	}
+	.table_desc {
+	  /* lateral navigation */
+	  position: fixed;
+	  z-index: 1;
+	  left: 10%;
+	  top: 40%;
+	  bottom: auto;
+	  display: block;
+	  overflow: hidden;
+	}
+</style>

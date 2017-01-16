@@ -53,9 +53,12 @@ Main Components
 
 .cd-section {
   height: 100vh;
+  width: 100%;
 }
 iframe {
   height: 100vh;
+  width: 100%;
+  vertical-align: middle;
   position: relative;
 }
 .cd-section h2 {
@@ -69,7 +72,6 @@ iframe {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 20px;
   z-index: 2;
   font-weight: bold;
   font-size: 1.3rem;
@@ -82,19 +84,13 @@ iframe {
   background-size: cover;
 }
 [data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
-  background-image: url("../img/img-2.jpg");
+  background-color: #faf9f0;
 }
 [data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
-  background-image: url("../img/img-2.jpg");
+  background-color: #faf9f0;
 }
 [data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
-  background-image: url("../img/img-2.jpg");
-}
-[data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
-  background-image: url("../img/img-2.jpg");
-}
-[data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
-  background-image: url("../img/img-2.jpg");
+  background-color: #faf9f0;
 }
 @media only screen and (min-width: 1050px) {
   .cd-section h2 {
@@ -190,6 +186,9 @@ iframe {
   white-space: nowrap;
   background: url(../img/cd-icon-arrow.svg) no-repeat center center;
 }
+.cd-vertical-nav a:hover{
+  background: url(../img/cd-icon-select.svg) no-repeat center center;
+}
 .cd-vertical-nav a.cd-prev {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -222,6 +221,7 @@ header {
   left: 0;
   right: 0;
   padding:15px 15px;
+  z-index: 1;
 }
 nav ul{
   text-align:right;
@@ -232,7 +232,6 @@ nav ul li{
   display:inline;
 }
 nav ul li a{
-  font-family: 'Quicksand';
   font-weight:bold;
   text-decoration:none;
   padding:5px 5px;
@@ -242,11 +241,36 @@ nav ul li a:hover{
   color:#000;
   background-color:#fff;
 }
+nav h2 {
+  position: fixed;
+  vertical-align: middle;
+  padding: 1px 15px;
+  border-right: 1px solid white;
+  font-size: 25px;
+  font-weight: lighter;
+}
 
 footer {
-  width: 500px;
-  margin: 50px auto;
-  border-top: 1px dotted #ccc;
-  padding-top: 5px;
-  font-size: 13px;
+  width: 100%;
+  bottom: 0;
+  text-align: right;
+  margin: 20px auto;
+  padding-right: 10px;
+  font-size: 15px;
+  position: fixed;
+  color: #000;
+}
+
+.mainContent {
+  position: relative;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.mainContent:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
 }
