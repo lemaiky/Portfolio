@@ -141,6 +141,7 @@ h3 {
   transition-delay: 0s;
 }
 .hovereffect:hover img {
+  -webkit-filter: grayscale(1);
   filter: grayscale(1);
 }
 .hovereffect img {
