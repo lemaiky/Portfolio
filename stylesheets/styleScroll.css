@@ -213,20 +213,20 @@ header {
   font-family: 'Quicksand';
   color: #fff;
   font-size: 15px;
-  text-align: center;
+  vertical-align: middle;
   font-weight: bold;
   background-color: #000;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding:15px 15px;
   z-index: 1;
+  height: 50px;
 }
 nav ul{
   text-align:right;
   list-style-type:none;
-  padding:5px 5px;
+  padding:15px 15px;
 }
 nav ul li{
   display:inline;
@@ -234,20 +234,21 @@ nav ul li{
 nav ul li a{
   font-weight:bold;
   text-decoration:none;
-  padding:5px 5px;
   color: #fff;
+  padding: 5px;
 }
 nav ul li a:hover{
-  color:#000;
-  background-color:#fff;
+  font-size: 18px;
 }
 nav h2 {
   position: fixed;
   vertical-align: middle;
-  padding: 1px 15px;
-  border-right: 1px solid white;
+  left: 43%;
+  top: 1%;
+  padding: 5px 20px;
   font-size: 25px;
   font-weight: lighter;
+  text-align: center;
 }
 
 footer {
@@ -259,6 +260,38 @@ footer {
   font-size: 15px;
   position: fixed;
   color: #000;
+}
+
+.contact {
+  width: 20%;
+  float: left;
+  color: #000;
+}
+.contact ul{
+  text-align:left;
+  padding: 5px 5px;
+}
+.contact ul li{
+  display:inline-block;
+  vertical-align: middle;
+}
+.contact ul li a{
+  text-decoration:none;
+  color: #fff;
+  font-size: 30px;
+  padding:0px 5px;
+}
+
+img.logo {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  padding-top: 5px;
+}
+img.logo:hover {
+  transform: scale(1.3);
+}
+a.logo_link:hover {
+  font-size: 35px;
 }
 
 .mainContent {
