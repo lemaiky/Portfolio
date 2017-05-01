@@ -1,45 +1,42 @@
-<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+<head>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+</head>
 
-<!-- About me -->
-<div class="aboutMe">
-	<table style="border: 1px solid black;" height="50px">
-		<tr>
-			<td>Placeholder <i>About me</i></td>
-		</tr>
-	</table>
-</div>
-<div class="education">
-	<table>
-		<tr>
-			<td>
-				<div class="hovereffect">
-					<img id="logo_kth" class="schoolLogo" src="../img/Kth_logo.svg" width="30%"/>
-					<div class="schoolDescription">
-						<h3>MSc. <br/> Interactive Media Technology</h3>
-						<i>Computer Graphics and Visualization</i>
-						<br/>
-						<span>KTH Royal Institute of Technology</span>
+<body>
+	<!-- About me -->
+	<div class="aboutMe">
+		<h1>Software developer currently pursuing a Master in Interactive Media Technology in Sweden.</h1>
+	</div>
+	<div class="education">
+		<table>
+			<tr>
+				<td>
+					<div class="hovereffect">
+						<img id="logo_kth" class="schoolLogo" src="../img/Kth_logo.svg" width="30%"/>
+						<div class="schoolDescription">
+							<h3>MSc. <br/> Interactive Media Technology</h3>
+							<i>Computer Graphics and Visualization</i>
+							<br/>
+							<span>KTH Royal Institute of Technology</span>
+						</div>
+	    			</div>
+				</td>
+				<td>
+					<div class="hovereffect">
+						<img id="logo_polymtl" class="schoolLogo" src="../img/Polymtl_Logo.svg" width="30%"/>
+						<div class="schoolDescription">
+							<h3>BEng. <br/> Software Engineering</h3>
+							<i>Multimedia</i>
+							<br/>
+							<span>Ecole Polytechnique de Montreal</span>
+						</div>
 					</div>
-    			</div>
-			</td>
-			<td>
-				<div class="hovereffect">
-					<img id="logo_polymtl" class="schoolLogo" src="../img/Polymtl_Logo.svg" width="30%"/>
-					<div class="schoolDescription">
-						<h3>BEng. <br/> Software Engineering</h3>
-						<i>Multimedia</i>
-						<br/>
-						<span>Ecole Polytechnique de Montreal</span>
-					</div>
-				</div>
-			</td>
-		</tr>
-	</table>
-</div>
-<div class="skills">
-	<table style="border: 1px solid black;" height="50px">
-		<tr>
-			<td>Placeholder <i>Technical skills</i></td>
-		</tr>
-	</table>
-</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="skills"></div>
+
+	<script src="../javascripts/skills.js"></script>
+</body>

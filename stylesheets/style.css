@@ -109,19 +109,30 @@ h3 {
   font-weight: bold;
 }
 
+/************************************************
+ *
+ * ABOUT SECTION
+ *
+ ************************************************/
+.aboutMe {
+  margin-top: 50px;
+  text-align: center;
+}
+.aboutMe h1 {
+  font-weight: bold;
+  font-size: 18px;
+}
 .hovereffect {
-  width: 100%;
-  height: 100%;
   overflow: hidden;
   position: relative;
   text-align: center;
   cursor: default;
+  margin-left: 20%;
 }
 .schoolDescription {
-  width: 50%;
   height: 100%;
-  padding-top: 50px;
-  padding-left: 25px;
+  padding-top: 5%;
+  padding-left: 5%;
 }
 .hovereffect .schoolDescription {
   position: absolute;
@@ -147,7 +158,7 @@ h3 {
 .hovereffect img {
   display: block;
   position: relative;
-  padding-left: 90px;
+  margin-left: 90px;
 }
 .schoolDescription h3 {
   color: #000;
@@ -164,4 +175,54 @@ h3 {
   color: #000;
   position: relative;
   font-size: 15px;
+}
+
+/************************************************
+ *
+ * SKILLS SECTION
+ *
+ ************************************************/
+.node {
+  cursor: pointer;
+}
+.node text {
+  font-size: 14px;
+}
+.link {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 1px;
+}
+
+/************************************************
+ *
+ * PROJECT SECTION
+ *
+ ************************************************/
+ div.video{
+   width: 100%;
+   height: 70%;
+   background-color: rgba(0, 0, 0, 0.2);
+   position: fixed;
+   margin: 100px auto;
+   padding: 0;
+   left: 0;
+   display: block;
+ }
+ .table_desc {
+   /* lateral navigation */
+   width: 40%;
+   height: auto;
+   position: fixed;
+   z-index: 1;
+   right: 5%;
+   top: 20%;
+ }
+.project_desc li {
+  padding: none;
+  font-size: 16px;
+}
+.project_desc li h1 {
+  font-size: 20px;
+  font-weight: bold;
 }

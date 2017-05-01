@@ -1,6 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Quicksand");
 
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -40,9 +40,9 @@ a {
   text-decoration: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main Components 
+Main Components
 
 -------------------------------- */
 @media only screen and (min-width: 1050px) {
@@ -237,9 +237,6 @@ nav ul li a{
   color: #fff;
   padding: 5px;
 }
-nav ul li a:hover{
-  font-size: 18px;
-}
 nav h2 {
   position: fixed;
   vertical-align: middle;
@@ -288,10 +285,22 @@ img.logo {
   padding-top: 5px;
 }
 img.logo:hover {
-  transform: scale(1.3);
+  -webkit-filter: invert(0.5);
+  filter: invert(0.5);
 }
 a.logo_link:hover {
-  font-size: 35px;
+  -webkit-filter: invert(0.5);
+  filter: invert(0.5);
+  font-size: 30px;
+}
+
+.headerButtons li {
+  font-size: 18px;
+}
+
+.headerButtons li:hover{
+  background-color: #555;
+  border-radius: 5px;
 }
 
 .mainContent {

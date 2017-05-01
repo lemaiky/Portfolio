@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="stylesheets/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="stylesheets/styleScroll.css"> <!-- Resource style -->
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <script src="javascripts/modernizr.js"></script> <!-- Modernizr -->
   </head>
+
   <body data-hijacking="on" data-animation="fixed">
     <!-- Header - navigation bar-->
   	<header>
@@ -21,7 +21,7 @@
           </ul>
         </div>
         <h2>Mai-Khanh Lê</h2>
-        <ul>
+        <ul class="headerButtons">
           <li><a href='#about' onclick="displayAbout()">About</a></li>
           <li><a href='#projects' onclick="displayWork()">Work</a></li>
         </ul>
@@ -37,21 +37,22 @@
     </div>
 
     <footer>
-      - Mai-Khanh Lê - 2017 -
+      - 2017 -
     </footer>
 
     <script src="javascripts/jquery-2.1.4.js"></script>
     <script src="javascripts/velocity.min.js"></script>
     <script src="javascripts/velocity.ui.min.js"></script>
     <script src="javascripts/main.js"></script> <!-- Resource jQuery -->
+    <script src="javascripts/modernizr.js"></script> <!-- Modernizr -->
 
     <script>
       function displayWork() {
-        document.getElementById("work").style.visibility = "visible";
+        document.getElementById("projects").style.visibility = "visible";
         document.getElementById("about").style.visibility = "hidden";
       }
       function displayAbout() {
-        document.getElementById("work").style.visibility = "hidden";
+        document.getElementById("projects").style.visibility = "hidden";
         document.getElementById("about").style.visibility = "visible";
       }
     </script>
