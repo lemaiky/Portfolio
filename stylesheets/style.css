@@ -193,7 +193,15 @@ h3 {
   stroke: #aaa;
   stroke-width: 1px;
 }
-
+#programming {
+  width: 50%;
+}
+#otherskills {
+  width: 50%;
+}
+#skills {
+  display: flex;
+}
 /************************************************
  *
  * PROJECT SECTION

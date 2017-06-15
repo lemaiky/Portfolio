@@ -1,37 +1,37 @@
-var margin = {top: 20, right: 100, bottom: 20, left: 100},
+var margin = {top: 20, right: 60, bottom: 20, left: 60},
     width = (window.innerWidth - margin.right - margin.left) / 2,
     height = window.innerHeight - margin.top - margin.bottom;
 
 var i = 0,
     duration = 750,
-    rootProg;
+    root;
 
-var treeProg = d3.layout.tree()
+var tree = d3.layout.tree()
     .size([height, width]);
 
 var diagonal = d3.svg.diagonal()
     .projection(function(d) { return [d.y, d.x]; });
 
-var svgProg = d3.select("#programming").append("svg")
+var svg = d3.select("#otherskills").append("svg")
     .attr("width", width)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + (width - margin.left) + "," + margin.top + ")");
 
 var xScale =  d3.scale.linear()
-                .domain([0,5])
+                .domain([0,2])
                 .range([0, 400]);
 
 var xAxis = d3.svg.axis("top")
               .scale(xScale)
-              .ticks(5);
+              .ticks(2);
 
-d3.json("../data/programming.json", function(error, flare) {
+d3.json("../data/flare.json", function(error, flare) {
   if (error) throw error;
 
-  rootProg = flare;
-  rootProg.x0 = height / 2;
-  rootProg.y0 = 0;
+  root = flare;
+  root.x0 = height / 2;
+  root.y0 = 0;
 
   function collapse(d) {
     if (d.children) {
@@ -41,28 +41,28 @@ d3.json("../data/programming.json", function(error, flare) {
     }
   }
 
-  rootProg.children.forEach(collapse);
-  updateProg(rootProg);
+  root.children.forEach(collapse);
+  update(root);
 });
 
-function updateProg(source) {
+function update(source) {
 
   // Compute the new tree layout.
-  var nodes = treeProg.nodes(rootProg).reverse(),
-      links = treeProg.links(nodes);
+  var nodes = tree.nodes(root).reverse(),
+      links = tree.links(nodes);
 
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 150; });
+  nodes.forEach(function(d) { d.y = d.depth * -150; });
 
   // Update the nodes…
-  var node = svgProg.selectAll("g.node")
+  var node = svg.selectAll("g.node")
       .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
   // Enter any new nodes at the parent's previous position.
   var nodeEnter = node.enter().append("g")
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
-      .on("click", clickProg);
+      .on("click", click);
 
   nodeEnter.append("circle")
       .attr("class", function(d) { return d.children || d._children ? "node--internal" : "node--leaf"; })
@@ -70,9 +70,9 @@ function updateProg(source) {
       .style("fill", function(d) { return d._children ? "#aaa" : "#000"; });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
+      .attr("x", function(d) { return d.children || d._children ? 10 : -10; })
       .attr("dy", ".35em")
-      .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+      .attr("text-anchor", function(d) { return d.children || d._children ? "start" : "end"; })
       .text(function(d) { return d.name; })
       .style("fill-opacity", 1e-6)
       .style("font-size", function(d) { return d.size; });
@@ -104,13 +104,13 @@ function updateProg(source) {
   nodeExit.select("text")
       .style("fill-opacity", 1e-6);
 
-  svgProg.selectAll(".node--leaf")
+  svg.selectAll(".node--leaf")
     .on("mouseover", function(d) {
 
     })
 
   // Update the links…
-  var link = svgProg.selectAll("path.link")
+  var link = svg.selectAll("path.link")
       .data(links, function(d) { return d.target.id; });
 
   // Enter any new links at the parent's previous position.
@@ -143,7 +143,7 @@ function updateProg(source) {
 }
 
 // Toggle children on click.
-function clickProg(d) {
+function click(d) {
   if (d.children) {
     d._children = d.children;
     d.children = null;
@@ -151,5 +151,5 @@ function clickProg(d) {
     d.children = d._children;
     d._children = null;
   }
-  updateProg(d);
+  update(d);
 }

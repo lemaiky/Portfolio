@@ -1,0 +1,53 @@
+{
+   "name": "Programming",
+   "children": [
+    {
+     "name": "Languages",
+     "children": [
+      {"name": "C/C++", "size": "20px"},
+      {"name": "Java", "size": "20px"},
+      {"name": "C#", "size": "16px"},
+      {"name": "JavaScript", "size": "16px"},
+      {"name": "HTML/CSS", "size": "16px"},
+      {"name": "Matlab", "size": "16px"},
+      {"name": "Python", "size": "12px"}
+     ]
+    },
+    {
+     "name": "Computer Graphics/Visualization",
+     "children": [
+      {"name": "OpenGL/GLSL", "size": "16px"},
+      {"name": "D3.js", "size": "14px"},
+      {"name": "threejs", "size": "12px"},
+      {"name": "Processing", "size": "12px"}
+     ]
+    },
+    {
+      "name": "Testing",
+      "children": [
+        {"name": "CppUnit", "size": "16px"},
+        {"name": "JUnit", "size": "16px"},
+        {"name": "Mocha", "size": "14px"}
+      ]
+    },
+    {
+      "name": "Database",
+      "children": [
+        {"name": "MySQL", "size": "14px"},
+        {"name": "PostgreSQL", "size": "14px"}
+      ]
+    },
+    {
+     "name": "Platforms/Frameworks",
+     "children": [
+      {"name": "Visual Studio", "size": "20px"},
+      {"name": "Eclipse", "size": "20px"},
+      {"name": "Netbeans", "size": "18px"},
+      {"name": "Unity", "size": "16px"},
+      {"name": "QT Creator", "size": "14px"},
+      {"name": "React Native", "size": "14px"},
+      {"name": "AngularJS", "size": "14px"}
+     ]
+    }
+   ]
+  }
