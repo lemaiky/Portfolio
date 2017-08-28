@@ -26,7 +26,7 @@ var xAxis = d3.svg.axis("top")
               .scale(xScale)
               .ticks(5);
 
-d3.json("../data/programming.json", function(error, flare) {
+d3.json("data/programming.json", function(error, flare) {
   if (error) throw error;
 
   rootProg = flare;
