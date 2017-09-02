@@ -6,7 +6,6 @@
     <title>Mai-Khanh Portfolio</title>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/styleScroll.css"> <!-- Resource style -->
     <link rel="stylesheet" href="stylesheets/style.css">
     
     <script src="https://www.w3schools.com/lib/w3data.js"></script>
@@ -19,32 +18,32 @@
 
   <body>
     <!-- HEADER SECTION -->
-    <div class="navbar navbar-dark bg-dark">
+    <div id="navigationbar" class="navbar navbar-dark sticky-top">
       <div class="container d-flex justify-content-between">
         <!-- Contact -->
         <div class="contact">
-          <ul>
-            <li><a href="mailto:lemaikhanh.lmk@gmail.com" class="logo_link">@</a></li>
-            <li><a href="https://www.linkedin.com/in/lemaikhanh" class="logo_link"><img src="img/In-Black-128px-R.png" width="30" class="logo"/></a></li>
-            <li><a href="https://github.com/lemaiky" class="logo_link"><img src="img/GitHub-Mark-120px-plus.png" width="30" class="logo"/></a></li>
+          <ul class="nav">
+            <li class="nav-item"><a href="mailto:lemaikhanh.lmk@gmail.com" class="logo_link">@</a></li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/lemaikhanh"><img src="img/In-Black-128px-R.png" width="30" class="logo"/></a></li>
+            <li class="nav-item"><a href="https://github.com/lemaiky"><img src="img/GitHub-Mark-120px-plus.png" width="30" class="logo"/></a></li>
           </ul>
         </div>
         <div>
-          <ul class="headerButtons">
-            <li><a href='#about' onclick="displayAbout()">About</a></li>
-            <li><a href='#projects' onclick="displayWork()">Work</a></li>
+          <ul class="nav">
+            <li class="nav-item active"><a href='#about' onclick="displayAbout()">About</a></li>
+            <li class="nav-item"><a href='#projects' onclick="displayWork()">Work</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <!-- ABOUT SECTION -->
-    <section class="jumbotron text-center">
+    <section class="jumbotron jumbotron-fluid text-center">
       <div class="container">
-        <h1>Mai-Khanh Lê</h1>
+        <div id="name">Mai-Khanh Lê</div>
         <p class="lead text-muted">Software developer currently studying Interactive Media Technology in Sweden.</p>
-        <div class="education">
-          <table>
+        <div>
+          <table id="education">
             <tr>
               <td>
                 <div class="hovereffect">
@@ -75,10 +74,12 @@
     </section>
 
     <!-- SKILLS SECTION -->
-    <div id="skills">
-      <div id="programming"></div>
-      <div id="otherskills"></div>
-    </div>
+    <section class="jumbotron jumbotron-fluid text-center">
+      <div id="skills">
+        <div id="programming"></div>
+        <div id="otherskills"></div>
+      </div>
+    </section>
 
     <!-- PROJECT SECTION -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
