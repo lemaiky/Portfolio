@@ -9,6 +9,7 @@ body {
   line-height: 1;
   font-size: 18px;
   font-family: 'Marvel';
+  background-color: rgb(233, 236, 239);
 }
 .navbar {
   background-color: #172437 !important;
@@ -23,7 +24,8 @@ body {
   filter: invert(50%);
 }
 .nav-item {
-  padding: 10%;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 .nav-item a {
   cursor: pointer;
@@ -33,6 +35,10 @@ body {
   text-decoration: none;
   color: #a2a3b7;
 }
+.jumbotron {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 
 /************************************************
  *
@@ -40,7 +46,7 @@ body {
  *
  ************************************************/
 #name {
-  font-size: 100px;
+  font-size: 60px;
   font-weight: 600;
   font-family: 'Oswald';
   color: #172437;
@@ -78,7 +84,7 @@ table#education td {
   -webkit-transition: all 0.1s ease-out 0.3s;
   transition: all 0.1s ease-out 0.3s;
 }
-.hovereffect:hover .schoolDescription {
+.hovereffect:hover .schoolDescription{
   opacity: .8;
   filter: alpha(opacity=100);
   top: 0px;
@@ -108,9 +114,6 @@ table#education td {
   position: relative;
   font-size: 15px;
 }
-#logo_polymtl {
-  /*margin-left: 30% !important;*/
-}
 
 /************************************************
  *
@@ -121,7 +124,11 @@ table#education td {
   cursor: pointer;
 }
 .node text {
-  font-size: 14px;
+  font-size: 16px;
+  stroke: #172437;
+}
+.node--leaf {
+  fill: #172437;
 }
 .link {
   fill: none;
