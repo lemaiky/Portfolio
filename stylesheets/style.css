@@ -52,68 +52,6 @@ body {
   color: #172437;
   padding: 1%;
 }
-table#education {
-  width: 100%;
-  margin-top: 5%;
-}
-table#education td {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  width: 50%;
- }
-.hovereffect {
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-}
-.schoolDescription {
-  height: 100%;
-  width: 100%;
-  padding-top: 8%;
-  padding-left: 10%;
-}
-.hovereffect .schoolDescription {
-  position: absolute;
-  overflow: hidden;
-  background-color: #e9ecef;
-  top: -200px;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: all 0.1s ease-out 0.3s;
-  transition: all 0.1s ease-out 0.3s;
-}
-.hovereffect:hover .schoolDescription{
-  opacity: .8;
-  filter: alpha(opacity=100);
-  top: 0px;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-.hovereffect img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  display: block;
-  position: relative;
-  margin-left: 40%;
-}
-.schoolDescription h3 {
-  color: #000;
-  position: relative;
-  font-size: 20px;
-  font-weight: bold;
-}
-.schoolDescription i{
-  color: #000;
-  position: relative;
-  font-size: 15px;
-}
-.schoolDescription span{
-  color: #000;
-  position: relative;
-  font-size: 15px;
-}
 
 /************************************************
  *
@@ -144,35 +82,58 @@ table#education td {
 #skills {
   display: flex;
 }
+
 /************************************************
  *
  * PROJECT SECTION
  *
  ************************************************/
- div.video{
-   width: 100%;
-   height: 70%;
-   background-color: rgba(0, 0, 0, 0.2);
-   position: fixed;
-   margin: 100px auto;
-   padding: 0;
-   left: 0;
-   display: block;
- }
- .table_desc {
-   /* lateral navigation */
-   width: 40%;
-   height: auto;
-   position: fixed;
-   z-index: 1;
-   right: 5%;
-   top: 20%;
- }
-.project_desc li {
-  padding: none;
-  font-size: 16px;
+.hovereffect {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  width: 343px;
+  height: 218px;
 }
-.project_desc li h1 {
-  font-size: 20px;
-  font-weight: bold;
+.schoolDescription {
+  height: 100%;
+  width: 100%;
+  padding-top: 8%;
+}
+.schoolDescription div {
+  padding: 1%;
+}
+.hovereffect .schoolDescription {
+  position: absolute;
+  overflow: hidden;
+  color: #fff;
+  background-color: #172437;
+  top: -200px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.1s ease-out 0.3s;
+  transition: all 0.1s ease-out 0.3s;
+}
+.hovereffect:hover .schoolDescription{
+  opacity: .9;
+  filter: alpha(opacity=100);
+  top: 0px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.hovereffect img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  display: block;
+  position: relative;
+}
+.schoolDescription span{
+  color: yellow;
+  position: relative;
+  font-size: 90%;
+  padding: 3%;
+}
+#projects {
+  display: flex;
 }
