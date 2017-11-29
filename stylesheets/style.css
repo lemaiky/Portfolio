@@ -95,6 +95,7 @@ body {
   cursor: default;
   width: 343px;
   height: 218px;
+  margin: 2% .5% 2% .5%;
 }
 .schoolDescription {
   height: 100%;
@@ -127,6 +128,7 @@ body {
   filter: grayscale(100%);
   display: block;
   position: relative;
+  border: .5px solid black;
 }
 .schoolDescription span{
   color: yellow;
@@ -134,6 +136,6 @@ body {
   font-size: 90%;
   padding: 3%;
 }
-#projects {
+.projectRow {
   display: flex;
 }
