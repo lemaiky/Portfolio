@@ -18,7 +18,7 @@ a {
   background-color: #16385B !important;
 }
 .logo_link {
-  font-size: 28px;
+  font-size: 200%;
 }
 .logo {
   filter: invert(100%);
@@ -136,6 +136,8 @@ a {
   display: inline;
   position: relative;
   height: 100%;
+  max-width: 100%;
+  border-radius: 100%;
 }
 .schoolDescription span{
   color: yellow;
@@ -148,9 +150,4 @@ a {
 }
 .schoolRow .hovereffect {
   cursor: pointer;
-}
-.schoolRow .hovereffect img {
-  width: auto;
-  height: 100%;
-  display: inline;
 }

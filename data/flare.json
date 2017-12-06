@@ -16,7 +16,8 @@
       "name": "AGILE",
       "children": [
         {"name": "Scrum", "size": "20px"},
-        {"name": "Kanban", "size": "18px"}
+        {"name": "Kanban", "size": "18px"},
+        {"name": "Lean", "size": "18px"}
       ]
     },
     {"name": "Team work", "size": "20px"},

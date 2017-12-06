@@ -15,13 +15,13 @@
 	});
 })
 
-$('#kth-projects').css('display', 'none');
+$('.kth-projects').css('display', 'none');
 
 $('#kth').on('mouseup', function(e) {
-	if($('#kth-projects').css('display') == 'inline-flex')
-		$('#kth-projects').css('display', 'none');
+	if($('.kth-projects').css('display') == 'inline-flex')
+		$('.kth-projects').css('display', 'none');
 	else
-		$('#kth-projects').css('display', 'inline-flex');
+		$('.kth-projects').css('display', 'inline-flex');
 });
 
 $('#polymtl-projects').css('display', 'none');

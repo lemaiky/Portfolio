@@ -23,7 +23,7 @@
      ]
     },
     {
-      "name": "Testing",
+      "name": "Test",
       "children": [
         {"name": "CppUnit", "size": "16px"},
         {"name": "JUnit", "size": "16px"},
@@ -43,10 +43,11 @@
       {"name": "Visual Studio", "size": "20px"},
       {"name": "Eclipse", "size": "20px"},
       {"name": "Netbeans", "size": "18px"},
+      {"name": "AngularJS", "size": "16px"},
       {"name": "Unity", "size": "16px"},
+      {"name": "Unreal Engine", "size": "14px"},
       {"name": "QT Creator", "size": "14px"},
-      {"name": "React Native", "size": "14px"},
-      {"name": "AngularJS", "size": "14px"}
+      {"name": "React Native", "size": "14px"}
      ]
     }
    ]
