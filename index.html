@@ -10,10 +10,9 @@
     
     <script src="https://www.w3schools.com/lib/w3data.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    
 
-    <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
   </head>
 
   <body>
@@ -22,302 +21,35 @@
       <div class="container d-flex justify-content-between">
         <!-- Contact -->
         <div class="contact">
-          <ul class="nav">
-            <li class="nav-item"><a href="mailto:lemaikhanh.lmk@gmail.com" class="logo_link">@</a></li>
-            <li class="nav-item"><a href="https://www.linkedin.com/in/lemaikhanh"><img src="img/In-Black-128px-R.png" class="logo"/></a></li>
-            <li class="nav-item"><a href="https://github.com/lemaiky"><img src="img/GitHub-Mark-120px-plus.png" class="logo"/></a></li>
-          </ul>
-        </div>
-        <div>
-          <ul class="nav">
-            <li class="nav-item active"><a href='#about' id="about-link">About</a></li>
-            <!-- <li class="nav-item"><a href='#skills' id="skills-link">Skills</a></li> -->
-            <li class="nav-item"><a href='#projects' id="projects-link">Work</a></li>
-          </ul>
+          <div class="nav-item"><a href="mailto:lemaikhanh.lmk@gmail.com" class="logo_link">@</a></div>
+          <div class="nav-item"><a href="https://www.linkedin.com/in/lemaikhanh"><img src="img/In-Black-128px-R.png" class="logo"/></a></div>
+          <div class="nav-item"><a href="https://github.com/lemaiky"><img src="img/GitHub-Mark-120px-plus.png" class="logo"/></a></div>
         </div>
       </div>
     </div>
 
-    <!-- ABOUT SECTION -->
-    <!-- <div  id="about">
-    <section class="jumbotron jumbotron-fluid text-center">
-      <div class="container">
-        <div id="name">Mai-Khanh Lê</div>
-        <p class="lead text-muted">Software developer currently studying Interactive Media Technology in Sweden.</p>
-      </div>
-    </section>
-    </div> -->
-
-    <!-- SKILLS SECTION -->
-    <!-- <section class="jumbotron jumbotron-fluid text-center">
-      <div id="skills">
-        <div id="programming"></div>
-        <div id="otherskills"></div>
-      </div>
-    </section> -->
-
-    <!-- PROJECT SECTION -->
-    <section class="jumbotron jumbotron-fluid text-center" id="projects">
-
-      <div class="projectRow schoolRow">
-
-        <!-- PERSO -->
-        <div class="hovereffect" id="perso">
-          <img src="img/Personal_logo.png" alt="Personal logo"/>
-          <div class="schoolDescription">
-            <div><h2>Mai-Khanh Lê</h2></div>
-            <div><span>Software Engineer</span></div>
-            <div>from Paris, France</div>
-            <div>1994 - 2017</div>
-          </div>
+    <div class="main-container" flex>
+      <div class="left_bar">
+        <div class="presentation">
+          <img id="perso_img" src="img/Personal_logo.png" alt="Personal logo"/>
+          <span>Mai-Khanh Lê</span>
         </div>
-
-        <!-- KTH -->
-        <div class="hovereffect" id="kth">
-          <img src="img/Kth_logo.svg" alt="KTH logo"/>
-          <div class="schoolDescription">
-            <div><h2>KTH</h2></div>
-            <div><span>MSc. Interactive Media Technology</span></div>
-            <div><i>
-              <span>computer graphics</span>
-              <span>visualization</span>
-            </i></div>
-            <div>Stockholm, Sweden</div>
-            <div>2016 - 2018</div>
-          </div>
-        </div>
-
-        <!-- POLYMTL -->
-        <div class="hovereffect" id="polymtl">
-          <img src="img/Polymtl_logo.svg" alt="Polymtl logo"/>
-          <div class="schoolDescription">
-            <div><h2>Polytechnique Montréal</h2></div>
-            <div><span>BEng. Software Engineering</span></div>
-            <div><i>
-              <span>media technology</span>
-            </i></div>
-            <div>Montreal, Canada</div>
-            <div>2011 - 2016</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="projectRow kth-projects">
-        <!-- ZOMBIE PROJECT -->
-        <div class="hovereffect" id="zombie-project">
-          <img src="img/." alt="No Country for Zombies image"/>
-          <div class="schoolDescription">
-            <div><h2>No Country for Zombies</h2></div>
-            <div><i>
-              <span>tabletop</span>
-              <span>game design</span>
-              <span>3D modelling</span>
-              <span>AR</span>
-            </i></div>
-            <div>Team project: 6 members</div>
-            <div class="project-tools">
-              <span>C#</span>
-              <span>Unity</span>
-              <span>Maya</span>
-              <span>Microsoft Pixelsense</span>
-              <span>Android phones</span>
-            </div>
-            <div><a href="#">Website</a></div>
-          </div>
-        </div>
-
-        <!-- UMBRELLA PROJECT -->
-        <div class="hovereffect" id="umbrella-project">
-          <img src="img/project_umbrella.png" alt="Umb-VR-ela image"/>
-          <div class="schoolDescription">
-            <div><h2>Umb-VR-ela</h2></div>
-            <div><i>
-              <span>VR</span>
-              <span>game design</span>
-              <span>particle system</span>
-            </i></div>
-            <div>Team project: 8 members</div>
-            <div class="project-tools">
-              <span>Oculus Rift</span>
-              <span>Unreal Engine</span>
-              <span>Maya</span>
-            </div>
-            <div><a href="umb-vr-ela.github.io/web">Website</a></div>
-          </div>
-        </div>
-
-        <!-- CAT PROJECT -->
-        <div class="hovereffect" id="cat-project">
-          <img src="img/CAT_Project.png" alt="Cohort Analysis Tool image"/>
-          <div class="schoolDescription">
-            <div><h2>Cohort Analysis Tool</h2></div>
-            <div><i>
-              <span>data visualization</span>
-              <span>front-end</span>
-              <span>design</span>
-              <span>UX</span>
-            </i></div>
-            <div>Team project: 8 members</div>
-            <div class="project-tools">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-              <span>D3.js</span>
-            </div>
-            <div><a href="https://raghunayyar.github.io/IVI17/">Website</a></div>
-          </div>
-        </div>
-
-        <!-- IVI17 PROJECTS -->
-        <div class="hovereffect" id="infoviz-project">
-          <img src="img/project_infovis1.png" alt="InfoViz projects"/>
-          <div class="schoolDescription">
-            <div><h2>Information Visualization</h2></div>
-            <div><i>
-              <span>data visualization</span>
-              <span>front-end</span>
-              <span>design</span>
-            </i></div>
-            <div><span><a href="https://www.kth.se/student/kurser/kurs/DH2321?l=en">KTH Course</a></span></div>
-            <div class="project-tools">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-              <span>D3.js</span>
-            </div>
-            <div>
-              <span><a href="https://lemaiky.github.io/dh2321-assignments/Assignment1/">Project 1</a></span>
-              <span><a href="https://lemaiky.github.io/dh2321-assignments/Assignment2/">Project 2</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="projectRow kth-projects">
-        <!-- IPROGD PROJECT -->
-        <div class="hovereffect" id="iprogd-project">
-          <img src="img/project_iprogd.png" alt="IPROGD project"></img>
-          <div class="schoolDescription">
-            <div><h2>Online Music Quiz</h2></div>
-            <div><i>
-              <span>web development</span>
-              <span>front-end</span>
-              <span>design</span>
-            </i></div>
-            <div><span><a href="https://www.kth.se/student/kurser/kurs/DH2642?l=en">KTH Course</a></span></div>
-            <div>Team project: 4 members</div>
-            <div class="project-tools">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-              <span>Spotify API</span>
-              <span>Firebase</span>
-            </div>
-            <div><a href="https://github.com/lemaiky/dh2642-project">Github</a></div>
-          </div>
-        </div>
-
-        <!-- MULTIMODAL PROJECT -->
-        <div class="hovereffect" id="multimodal-project">
-          <img src="img/project_multimodal.png" alt="Multimodal project"></img>
-          <div class="schoolDescription">
-            <div><h2>Nuclear Fusion in VR</h2></div>
-            <div><i>
-              <span>VR</span>
-              <span>3D Modelling</span>
-            </i></div>
-            <div><span><a href="https://www.kth.se/student/kurser/kurs/DT2140?l=en">KTH Course</a></span></div>
-            <div>Team project: 4 members</div>
-            <div class="project-tools">
-              <span>C++</span>
-              <span>Unity</span>
-              <span>Steam VR</span>
-              <span>HTC Vive</span>
-            </div>
-            <div><a href="https://player.vimeo.com/video/199288534">Video</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="projectRow" id="polymtl-projects">
-        <!-- BUSBUD PROJECT -->
-        <div class="hovereffect" id="busbud-project">
-          <img src="img/Icon_Busbud.png" alt="Busbud project"/>
-          <div class="schoolDescription">
-            <div><h2>Busbud Project</h2></div>
-            <div><i>
-              <span>android development</span>
-              <span>front-end</span>
-            </i></div>
-            <div><span><a href="http://www.polymtl.ca/etudes/cours/details.php?sigle=LOG8970">Polymtl Course</a></span></div>
-            <div>Team project: 6 members</div>
-            <div class="project-tools">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-              <span>React-Native</span>
-              <span>NodeJS</span>
-            </div>
-            <div><span><a href="https://github.com/math07/bus-management">Github</a></span>
-              <span><a href="https://busbud-poly-project.herokuapp.com/">API (examples)</a></span></div>
-          </div>
-        </div>
-
-        <!-- ASTEROIDS PROJECT -->
-        <div class="hovereffect" id="asteroids-project">
-          <img src="img/project_asteroid.png" alt="Asteroids project"></img>
-          <div class="schoolDescription">
-            <div><h2>Asteroids Project</h2></div>
-            <div><i>
-              <span>web app</span>
-              <span>ios app</span>
-              <span>network</span>
-              <span>3D modelling</span>
-            </i></div>
-            <div><span><a href="http://www.polymtl.ca/etudes/cours/details.php?sigle=LOG3900">Polymtl Course</a></span></div>
-            <div>Team project: 6 members</div>
-            <div class="project-tools">
-              <span>C++</span>
-              <span>C#</span>
-              <span>Objective-C</span>
-              <span>Eclipse/Visual Studio</span>
-              <span>Blender</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ROBOT PROJECT -->
-        <div class="hovereffect" id="robot-project">
-          <img src="img/project_robot.png" alt="Robot project"></img>
-          <div class="schoolDescription">
-            <div><h2>Robot Project</h2></div>
-            <div><i>
-              <span>microcontroller</span>
-              <span>circuit board</span>
-              <span>sensors</span>
-            </i></div>
-            <div><span><a href="http://www.groupes.polymtl.ca/inf1995/">Polymtl Course</a></span></div>
-            <div>Team project: 4 members</div>
-            <div class="project-tools">
-              <span>C/C++</span>
-              <span>Assembly</span>
-              <span>Atmel AVR Library</span>
-            </div>
-            <div><a href="https://youtu.be/OekaPPeMgWU">Video</a></div>
-          </div>
+        <div class="education">
+          <ul>
+            <li><a class="diploma_title" href="https://www.kth.se/en/studies/master/interactivemediatechnology">MSc. Interactive Media Technology</a> <br/>
+            KTH (Royal Institute of Technology), Sweden<br/>
+            2016-2018</li>
+            <li><a class="diploma_title" href="https://www.polymtl.ca/etudes/programmes/bc-logiciel">BEng. Software Engineering</a> <br/>
+            Polytechnique Montreal, Canada <br/>
+            2011-2016</li>
+          </ul>
         </div>
       </div>
       
-    </section>
+      <div class="right_bar">
 
-    <footer>
-      - 2018 -
-    </footer>
-
-    <script src="javascripts/main.js"></script>
-    <script src="javascripts/skills.js"></script>
-    <script src="javascripts/otherskills.js"></script>
-    <!-- script src="javascripts/projects.js"></script -->
+      </div>
+    </div>
 
   </body>
 </html>

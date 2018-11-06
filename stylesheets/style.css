@@ -10,12 +10,23 @@ body {
   font-size: 100%;
   font-family: 'Marvel';
   background-color: rgb(233, 236, 239);
+  color: #16385B;
 }
 a {
-  color: #748EAA;
+  color: #16385B;
+}
+a:hover {
+  text-decoration: none;
+  color: #F5CB5C;
+}
+.container {
+  margin-left: 2%;
 }
 .navbar {
   background-color: #16385B !important;
+}
+.contact {
+  display: flex;
 }
 .logo_link {
   font-size: 200%;
@@ -24,76 +35,87 @@ a {
   filter: invert(100%);
   width: 30px;
 }
-.logo:hover {
-  filter: invert(0%);
-}
-.nav-item {
-  padding-left: 7%;
-  padding-right: 7%;
-}
 .nav-item a {
   cursor: pointer;
   color: #fff;
 }
 .nav-item a:hover {
   text-decoration: none;
-  color: #000;
-}
-#about .jumbotron {
-  padding-top: 15%;
-  padding-bottom: 25%;
-}
-.jumbotron#projects {
-  padding-bottom: 15%;
-}
-/************************************************
- *
- * ABOUT SECTION
- *
- ************************************************/
-#name {
-  font-size: 350%;
-  font-weight: 600;
-  font-family: 'Oswald';
-  color: #16385B;
-  padding: 1%;
 }
 
-/************************************************
- *
- * SKILLS SECTION
- *
- ************************************************/
-.node {
-  cursor: pointer;
+.main-container {
+  width: 100%;
+  height: 100%;
 }
-.node text {
-  font-size: 90%;
+.left_bar {
+  position:absolute;
+  width: 20%;
+  height: 100%;
+}
+.right_bar {
+  position:absolute;
+  width: 80%;
+  height: 100%;
+  right:0;
+}
+#perso_img {
+  -webkit-filter: grayscale(70%);
+  filter: grayscale(70%);
+  height: auto;
+  width: 70%;
+  margin: 5% 15%;
+  border-radius: 10%;
+}
+.presentation {
+  text-align: center;
+}
+.presentation span {
+  font-size: 32px;
+}
+a.diploma_title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.education {
+  margin-top: 5%;
+}
+.education li {
+  padding-top: 3%;
+}
+.education ul {
+  padding-inline-start: 30px;
+}
+
+
+/*
+ *  EDUCATION VIZ
+ */
+.education {
+  margin-top: 5%;
+}
+.axis--y .tick line {
   stroke: #16385B;
 }
-.node--leaf {
+.axis--y .tick text {
   fill: #16385B;
 }
-.link {
-  fill: none;
-  stroke: #aaa;
-  stroke-width: .5%;
+path {
+  stroke: #16385B;
 }
-#programming {
-  width: 50%;
+.node {
+  transition: transform .2s;
 }
-#otherskills {
-  width: 50%;
+.nodeLine {
+  stroke: #16385B;
+  stroke-width: 10px;
 }
-#skills {
-  display: flex;
+.nodeText {
+  stroke: #F5CB5C;
+  font-size: 14px;
 }
 
-/************************************************
- *
- * PROJECT SECTION
- *
- ************************************************/
+
+
 .hovereffect {
   overflow: hidden;
   position: relative;
@@ -137,17 +159,11 @@ a {
   position: relative;
   height: 100%;
   max-width: 100%;
-  border-radius: 100%;
+  border-radius: 10%;
 }
 .schoolDescription span{
   color: yellow;
   position: relative;
   font-size: 90%;
   padding: 3%;
-}
-.projectRow {
-  display: inline-flex;
-}
-.schoolRow .hovereffect {
-  cursor: pointer;
 }
