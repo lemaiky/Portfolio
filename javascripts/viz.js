@@ -1,10 +1,4 @@
-/***********************************************************
- *
- * EDUCATION INFOVIZ DATA
- *
- ************************************************************/
-var educationData;
-var clientRect = d3.select("#education").node().getBoundingClientRect();
+var clientRect = d3.select(".skills").node().getBoundingClientRect();
 var margin = {top: 10, right: 30, bottom: 0, left: 0},
     widthOv = clientRect.width,
     heightOv = clientRect.height,
@@ -13,127 +7,60 @@ var margin = {top: 10, right: 30, bottom: 0, left: 0},
     heightOffset = 5,
     translateWidth = 200;
 
-var svgEducation = d3.select('#education').append("svg")
+var svgSkills = d3.select('.skills').append("svg")
 	.attr("width", widthOv)
-    .attr("height", heightOv + 30)
-    .attr("transform", "translate(" + 0 + ", " + margin.top + ")");
-	  		
-var y = d3.scaleLinear()
-		.domain([2011, 2018])
-		.range([heightOv - heightOffset, 5]);
+    .attr("height", heightOv);
 
-var yAxis = d3.axisLeft()
-			.scale(y)
-			.tickFormat(d3.format('.0f'))
-			.tickValues([2011, 2016, 2018]);
+var xScale =  d3.scaleLinear()
+        .domain([0,5])
+        .range([0, 200]);
 
-/************************************************************
- *
- * EDUCATION INFOVIZ
- *
- ************************************************************/
-d3.json("data/education.json", function(data) {
-	educationData = data;
+var xAxis = d3.axisTop()
+        .scale(xScale)
+        .ticks(5);
 
-	// create the left chronological axis 
-	svgEducation.append('g').classed('axis--y axis', true);
-	svgEducation.select('.axis--y')
-		.attr("transform", "translate(" + [35, 0] + ")")
-		.call(yAxis);
+d3.csv("data/skillsdata.csv", row, function(error, data) {
+    if (error) throw error;
 
-	// create a group for each data row
-	var container = svgEducation.selectAll('.node').data(educationData).enter()
-	                .append("svg:g")
-	                	.attr('class', 'node')
-	                	.attr("transform", function(d, i) { 
-	                		d.xPos = margin.right + (i+1) * widthOffset;
-	                		return "translate(" + [margin.right + (i+1) * widthOffset, 0] + ")"; 
-	                	});
+    // Setup position for every datum; Applying different css classes to parents and leafs.
+    var node = svgSkills.selectAll(".node")
+            .data(data)
+            .enter().append("g")
+            .attr("class", function(d) { return "node node--leaf"; })
+            .attr("transform", function(d,i) { return "translate(" + 15 + "," + (25*i+15) + ")"; });
 
-	// create the line
-	var lines = container.append("line")
-				.attr('class', 'nodeLine')
-				.attr("y1", function(d) {
-					return (2018 - d.endDate) * heightUnit + heightOffset;
-				})
-				.attr("y2", function(d) {
-					return (2018 - d.startDate) * heightUnit - heightOffset;
-				})
-				.on('mouseover', lineOverEventListener)
-				.on('mouseout', lineOutEventListener);
+    // Setup G for every leaf datum.
+    var leafNodeG = svgSkills.selectAll(".node--leaf")
+            .append("g")
+            .attr("class", "node--leaf-g")
+            .attr("transform", "translate(" + 8 + "," + -13 + ")");
 
-	// create the text {year range, school, title, description}
-	var text = container.append("svg:text")
-	            .attr('class', 'nodeText')
-	            .attr("opacity", 0)
-	            .attr("text-anchor", "start")
-	            .attr("dy", ".45em")
-	            .attr("transform", function(d) { 
-	            	var y = (2018 - d.endDate) * heightUnit + heightOffset;
-	            	if(y > heightOv)
-	            		y -= 30;
-	            	return "translate(" + [10, y] + ")"; 
-	            })
-	            .append('tspan')
-	            	.text(function(d) {return d.school})
-	            	.attr("x", 0).attr("dy", ".9em")
-	            	.attr('stroke-width', '.8px')
-	            	.call(wrap, 35)
-	            .append('tspan')
-	            	.text(function(d) {return d.title})
-	            	.attr("x", 0).attr("dy", ".9em")
-	            	.attr('stroke-width', '.5px')
-	            	.call(wrap, 35);
+    leafNodeG.append("rect")
+            .attr("class","shadow")
+            .style("fill", function(d) {return d.color;})
+            .attr("width", 2)
+            .attr("height", 20)
+            .attr("rx", 2)
+            .attr("ry", 2)
+            .transition()
+                .duration(800)
+                .attr("width", function(d) {return xScale(d.value);});
+
+    leafNodeG.append("text")
+            .attr("dy", 15)
+            .attr("x", 10)
+            .style("text-anchor", "start")
+            .style("stroke", function(d) {return d.textcolor;})
+            .text(function (d) {
+                return d.id;
+            });
 });
 
-// event listener: on line over
-function lineOverEventListener(d) {
-	d3.select(this).style('stroke', "#F5CB5C");
-
-	d3.selectAll('.node').filter(function(node) {return (node != d) && (educationData.indexOf(d) < educationData.indexOf(node) );})
-		.attr("transform", function(d, i) {
-			return "translate(" + [d.xPos + translateWidth, 0] + ")"; 
-		});
-
-	d3.selectAll(".nodeText").filter(function(node) {return node === d;})
-		.attr("opacity", 1);
-}
-
-// event listener: on line out
-function lineOutEventListener(d) {
-	d3.select(this).style('stroke', "#16385B");
-
-	d3.selectAll('.node').filter(function(node) {return (node != d) && (educationData.indexOf(d) < educationData.indexOf(node) );})
-		.attr("transform", function(d, i) {
-			return "translate(" + [d.xPos, 0] + ")"; 
-		});
-
-	d3.selectAll(".nodeText").filter(function(node) {return node === d;})
-		.attr("opacity", 0);
-}
-
-// Source: https://bl.ocks.org/mbostock/7555321
-function wrap(text, width) {
-	text.each(function() {
-        var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = .45, // ems
-        y = text.attr("y"),
-        dy = parseFloat(text.attr("dy")),
-        tspan = text.text(null).append("tspan").attr("x", 0).attr("dy", dy + "em");
-        while (word = words.pop()) {
-            line.push(word);
-            tspan.text(line.join(" "));
-            if (tspan.node().textContent.length > width) {
-                line.pop();
-                tspan.text(line.join(" "));
-                line = [word];
-                ++lineNumber;
-                tspan = text.append("tspan").attr("x", 0).attr("dy", dy + "em").text(word);
-            }
-        }
-    });
+function row(d) {
+    return {
+        id: d.id,
+        value: +d.value,
+        color: d.color,
+        textcolor: d.textcolor
+    };
 }

@@ -6,11 +6,15 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand|Alegreya+Sans+SC|Fjalla+One|Marvel|Muli|Oswald|PT+Sans+Narrow|Poppins|Saira+Condensed|Wire+One');
 
 body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   line-height: 1;
   font-size: 100%;
   font-family: 'Marvel';
   background-color: rgb(233, 236, 239);
   color: #16385B;
+  overflow: hidden;
 }
 a {
   color: #16385B;
@@ -51,6 +55,7 @@ a:hover {
   position:absolute;
   width: 20%;
   height: 100%;
+  border-right: .1px solid #16385B;
 }
 .right_bar {
   position:absolute;
@@ -62,8 +67,8 @@ a:hover {
   -webkit-filter: grayscale(70%);
   filter: grayscale(70%);
   height: auto;
-  width: 70%;
-  margin: 5% 15%;
+  width: 60%;
+  margin: 5% 20%;
   border-radius: 10%;
 }
 .presentation {
@@ -76,94 +81,23 @@ a.diploma_title {
   font-size: 18px;
   font-weight: bold;
 }
-.education {
-  margin-top: 5%;
-}
 .education li {
   padding-top: 3%;
 }
+.education li:nth-child(even) {
+  text-align: right;
+}
 .education ul {
-  padding-inline-start: 30px;
+  list-style-type: none;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
 }
 
-
-/*
- *  EDUCATION VIZ
- */
-.education {
-  margin-top: 5%;
-}
-.axis--y .tick line {
-  stroke: #16385B;
-}
-.axis--y .tick text {
-  fill: #16385B;
-}
-path {
-  stroke: #16385B;
-}
-.node {
-  transition: transform .2s;
-}
-.nodeLine {
-  stroke: #16385B;
-  stroke-width: 10px;
-}
-.nodeText {
-  stroke: #F5CB5C;
-  font-size: 14px;
-}
-
-
-
-.hovereffect {
-  overflow: hidden;
+.skills {
   position: relative;
-  text-align: center;
-  cursor: default;
-  width: 343px;
-  height: 218px;
-  margin: 2% .5% 2% .5%;
+  height: 50%;
 }
-.schoolDescription {
-  height: 100%;
-  width: 100%;
-  padding-top: 5%;
-  font-size: 120%;
-}
-.schoolDescription div {
-  padding: 1%;
-}
-.hovereffect .schoolDescription {
-  position: absolute;
-  overflow: hidden;
-  color: #fff;
-  background-color: #16385B;
-  top: -200px;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: all 0.1s ease-out 0.3s;
-  transition: all 0.1s ease-out 0.3s;
-}
-.hovereffect:hover .schoolDescription{
-  opacity: .95;
-  filter: alpha(opacity=100);
-  top: 0px;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-.hovereffect img {
-  -webkit-filter: grayscale(70%);
-  filter: grayscale(70%);
-  display: inline;
-  position: relative;
-  height: 100%;
-  max-width: 100%;
-  border-radius: 10%;
-}
-.schoolDescription span{
-  color: yellow;
-  position: relative;
+.node text {
   font-size: 90%;
-  padding: 3%;
+  stroke-width: .5;
 }

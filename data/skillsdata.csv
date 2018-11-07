@@ -1,0 +1,15 @@
+id,value,color,textcolor
+French, 5, #F5CB5C, #16385B
+English, 4.5, #F5CB5C, #16385B
+Vietnamese, 2.5, #F5CB5C, #16385B
+C/C++, 4.5, #16385B,  #F5CB5C
+C#, 3.5, #16385B, #F5CB5C
+Java, 4.5, #16385B, #F5CB5C
+HTML/CSS, 3.5, #16385B, #F5CB5C
+Javascript, 3.5, #16385B, #F5CB5C
+Matlab, 3, #16385B, #F5CB5C
+Python, 2, #16385B, #F5CB5C
+CG/Visualization, 3, #16385B, #F5CB5C
+Database, 3, #16385B, #F5CB5C
+Microsoft Office, 4.5, #16385B, #F5CB5C
+Project Management, 4, #16385B, #F5CB5C
