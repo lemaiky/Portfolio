@@ -101,3 +101,8 @@ a.diploma_title {
   font-size: 90%;
   stroke-width: .5;
 }
+
+.project rect {
+  fill: transparent;
+  stroke: #16385B;
+}
