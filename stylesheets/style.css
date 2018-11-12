@@ -96,6 +96,7 @@ a.diploma_title {
 .skills {
   position: relative;
   height: 50%;
+  margin-top: -5%;
 }
 .node text {
   font-size: 90%;

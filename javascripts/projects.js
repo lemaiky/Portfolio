@@ -23,12 +23,21 @@ d3.json("data/projects.json", function(error, data) {
             .attr("rx", 5)
             .attr("ry", 5);
 
-    projectContainer.append("text")
-            .attr("dy", 15)
-            .attr("x", 10)
-            .style("text-anchor", "start")
-            .style("stroke", "black")
-            .text(function (d) {
-                return d.name;
-            });
+    projectContainer.append("svg:image")
+            .attr("class", "project_img")
+            .attr("height", "200")
+            .attr("width", "250")
+            .attr("rx", 10)
+            .attr("ry", 10)
+            .attr("xlink:href", function(d) {return d.img;})
+            .attr("preserveAspectRatio", "none");
+
+    // projectContainer.append("text")
+    //         .attr("dy", 15)
+    //         .attr("x", 10)
+    //         .style("text-anchor", "start")
+    //         .style("stroke", "black")
+    //         .text(function (d) {
+    //             return d.name;
+    //         });
 });

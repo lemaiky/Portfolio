@@ -1,11 +1,7 @@
 var clientRect = d3.select(".skills").node().getBoundingClientRect();
 var margin = {top: 10, right: 30, bottom: 0, left: 0},
     widthOv = clientRect.width,
-    heightOv = clientRect.height,
-    heightUnit = heightOv / (2018 - 2011),
-    widthOffset = widthOv / 20,
-    heightOffset = 5,
-    translateWidth = 200;
+    heightOv = clientRect.height;
 
 var svgSkills = d3.select('.skills').append("svg")
 	.attr("width", widthOv)
@@ -44,9 +40,9 @@ d3.csv("data/skillsdata.csv", row, function(error, data) {
             .attr("height", 20)
             .attr("rx", 2)
             .attr("ry", 2)
-            .transition()
-                .duration(800)
-                .attr("width", function(d) {return xScale(d.value);});
+            // .transition()
+            //     .duration(800)
+            //     .attr("width", function(d) {return xScale(d.value);});
 
     leafNodeG.append("text")
             .attr("dy", 15)
@@ -68,11 +64,16 @@ function row(d) {
 }
 
 function onmouseover(d) {
-    d3.selectAll('.project').filter(function(p) {return p.tags.indexOf(d.id) != -1;})
-        .select("rect").style("stroke", "#F5CB5C");
+    if(d.color == "#F5CB5C") return;
+    d3.selectAll('.project').filter(function(p) {return p.tags.indexOf(d.id) == -1;})
+        .transition()
+            .duration(100)
+            .style("opacity", .2);
 }
 
 function onmouseleave(d) {
-    d3.selectAll('.project').filter(function(p) {return p.tags.indexOf(d.id) != -1;})
-        .select("rect").style("stroke", "#16385B");
+    d3.selectAll('.project').filter(function(p) {return p.tags.indexOf(d.id) == -1;})
+        .transition()
+            .duration(100)
+            .style("opacity", 1);
 }

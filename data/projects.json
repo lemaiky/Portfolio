@@ -2,61 +2,61 @@
 	"name": "No Country For Zombies",
 	"img": "",
 	"description": "test",
-	"tags": ["Tabletop", "Unity", "Network", "C#", "3D Models"]
+	"tags": ["C#", "CG", "Unity"]
 },
 {
 	"name": "Umb-VR-ela",
 	"img": "img/project_umbrella.png",
 	"description": "test",
-	"tags": ["VR", "Oculus", "Unreal Engine", "Particle System"]
+	"tags": ["CG"]
 },
 {
 	"name": "Cohort Analysis Tool",
 	"img": "img/CAT_Project.png",
 	"description": "test",
-	"tags": ["Visualization", "Javascript", "D3.js"]
+	"tags": ["Visualization", "Javascript", "HTML/CSS"]
 },
 {
 	"name": "Information Visualization",
 	"img": "img/project_infovis1.png",
 	"description": "test",
-	"tags": ["Visualization", "Javascript", "D3.js"]
+	"tags": ["Visualization", "Javascript", "HTML/CSS"]
 },
 {
 	"name": "Capture the Flag",
 	"img": "",
 	"description": "test",
-	"tags": ["Web", "HTML/CSS", "Javascript", "Network", "Multiplayer"]
+	"tags": ["HTML/CSS", "Javascript"]
 },
 {
 	"name": "Online Music Quiz",
 	"img": "img/project_iprogd.png",
 	"description": "test",
-	"tags": ["Web", "HTML/CSS", "Javascript", "Spotify API"]
+	"tags": ["HTML/CSS", "Javascript"]
 },
 {
 	"name": "Nuclear Fusion in VR",
 	"img": "img/project_multimodal.png",
 	"description": "test",
-	"tags": ["VR", "HTC Vive", "Unity", "HCI"]
+	"tags": ["CG", "Unity"]
 },
 {
 	"name": "Perception of Virtual Facial Expressions: Response Times and Accuracy",
 	"img": "",
 	"description": "test",
-	"tags": ["Unity", "HCI"]
+	"tags": ["Unity", "CG"]
 },
 {
 	"name": "Busbud project",
 	"img": "img/Icon_busbud.png",
 	"description": "test",
-	"tags": ["React-Native", "NodeJS", "Android"]
+	"tags": ["Javascript"]
 },
 {
 	"name": "Poly-asteroïde",
 	"img": "img/project_asteroid.png",
 	"description": "test",
-	"tags": ["Java", "C++", "C#", "Objective-C", "3D Models"]
+	"tags": ["Java", "C++", "C#", "CG"]
 },
 {
 	"name": "Robot Project",
