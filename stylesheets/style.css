@@ -102,6 +102,9 @@ a.diploma_title {
   stroke-width: .5;
 }
 
+.project {
+  cursor: pointer;
+}
 .project rect {
   fill: transparent;
   stroke: #16385B;

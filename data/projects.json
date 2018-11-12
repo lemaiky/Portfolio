@@ -1,44 +1,66 @@
 [{
 	"name": "No Country For Zombies",
-	"description": "test"
+	"img": "",
+	"description": "test",
+	"tags": ["Tabletop", "Unity", "Network", "C#", "3D Models"]
 },
 {
 	"name": "Umb-VR-ela",
-	"description": "test"
+	"img": "img/project_umbrella.png",
+	"description": "test",
+	"tags": ["VR", "Oculus", "Unreal Engine", "Particle System"]
 },
 {
 	"name": "Cohort Analysis Tool",
-	"description": "test"
+	"img": "img/CAT_Project.png",
+	"description": "test",
+	"tags": ["Visualization", "Javascript", "D3.js"]
 },
 {
 	"name": "Information Visualization",
-	"description": "test"
+	"img": "img/project_infovis1.png",
+	"description": "test",
+	"tags": ["Visualization", "Javascript", "D3.js"]
 },
 {
 	"name": "Capture the Flag",
-	"description": "test"
+	"img": "",
+	"description": "test",
+	"tags": ["Web", "HTML/CSS", "Javascript", "Network", "Multiplayer"]
 },
 {
 	"name": "Online Music Quiz",
-	"description": "test"
+	"img": "img/project_iprogd.png",
+	"description": "test",
+	"tags": ["Web", "HTML/CSS", "Javascript", "Spotify API"]
 },
 {
 	"name": "Nuclear Fusion in VR",
-	"description": "test"
+	"img": "img/project_multimodal.png",
+	"description": "test",
+	"tags": ["VR", "HTC Vive", "Unity", "HCI"]
 },
 {
 	"name": "Perception of Virtual Facial Expressions: Response Times and Accuracy",
-	"description": "test"
+	"img": "",
+	"description": "test",
+	"tags": ["Unity", "HCI"]
 },
 {
 	"name": "Busbud project",
-	"description": "test"
+	"img": "img/Icon_busbud.png",
+	"description": "test",
+	"tags": ["React-Native", "NodeJS", "Android"]
 },
 {
 	"name": "Poly-asteroïde",
-	"description": "test"
+	"img": "img/project_asteroid.png",
+	"description": "test",
+	"tags": ["Java", "C++", "C#", "Objective-C", "3D Models"]
 },
 {
 	"name": "Robot Project",
-	"description": "test"
+	"img": "img/project_robot.png",
+	"description": "test",
+	"tags": ["C"]
 }]

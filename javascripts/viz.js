@@ -33,7 +33,9 @@ d3.csv("data/skillsdata.csv", row, function(error, data) {
     var leafNodeG = svgSkills.selectAll(".node--leaf")
             .append("g")
             .attr("class", "node--leaf-g")
-            .attr("transform", "translate(" + 8 + "," + -13 + ")");
+            .attr("transform", "translate(" + 8 + "," + -13 + ")")
+            .on("mouseover", onmouseover)
+            .on("mouseout", onmouseleave);
 
     leafNodeG.append("rect")
             .attr("class","shadow")
@@ -63,4 +65,14 @@ function row(d) {
         color: d.color,
         textcolor: d.textcolor
     };
+}
+
+function onmouseover(d) {
+    d3.selectAll('.project').filter(function(p) {return p.tags.indexOf(d.id) != -1;})
+        .select("rect").style("stroke", "#F5CB5C");
+}
+
+function onmouseleave(d) {
+    d3.selectAll('.project').filter(function(p) {return p.tags.indexOf(d.id) != -1;})
+        .select("rect").style("stroke", "#16385B");
 }
