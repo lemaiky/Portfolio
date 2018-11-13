@@ -96,7 +96,6 @@ a.diploma_title {
 .skills {
   position: relative;
   height: 50%;
-  margin-top: -5%;
 }
 .node text {
   font-size: 90%;
@@ -109,4 +108,7 @@ a.diploma_title {
 .project rect {
   fill: transparent;
   stroke: #16385B;
+}
+#project_name {
+    font-size: 150%;
 }

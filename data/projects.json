@@ -2,25 +2,25 @@
 	"name": "No Country For Zombies",
 	"img": "",
 	"description": "test",
-	"tags": ["C#", "CG", "Unity"]
+	"tags": ["C#", "CG", "Unity", "Android"]
 },
 {
 	"name": "Umb-VR-ela",
 	"img": "img/project_umbrella.png",
 	"description": "test",
-	"tags": ["CG"]
+	"tags": ["CG", "Unreal Engine", "VR"]
 },
 {
 	"name": "Cohort Analysis Tool",
 	"img": "img/CAT_Project.png",
 	"description": "test",
-	"tags": ["Visualization", "Javascript", "HTML/CSS"]
+	"tags": ["Visualization", "Javascript", "HTML/CSS", "D3.js"]
 },
 {
 	"name": "Information Visualization",
 	"img": "img/project_infovis1.png",
 	"description": "test",
-	"tags": ["Visualization", "Javascript", "HTML/CSS"]
+	"tags": ["Visualization", "Javascript", "HTML/CSS", "D3.js"]
 },
 {
 	"name": "Capture the Flag",
@@ -38,7 +38,7 @@
 	"name": "Nuclear Fusion in VR",
 	"img": "img/project_multimodal.png",
 	"description": "test",
-	"tags": ["CG", "Unity"]
+	"tags": ["CG", "Unity", "VR"]
 },
 {
 	"name": "Perception of Virtual Facial Expressions: Response Times and Accuracy",
@@ -50,7 +50,7 @@
 	"name": "Busbud project",
 	"img": "img/Icon_busbud.png",
 	"description": "test",
-	"tags": ["Javascript"]
+	"tags": ["Javascript", "Android", "React-Native", "NodeJS"]
 },
 {
 	"name": "Poly-asteroïde",
@@ -62,5 +62,5 @@
 	"name": "Robot Project",
 	"img": "img/project_robot.png",
 	"description": "test",
-	"tags": ["C"]
+	"tags": ["C", "Assembly"]
 }]
